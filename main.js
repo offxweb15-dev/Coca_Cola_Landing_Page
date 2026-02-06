@@ -40,13 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme Configuration
     const themes = {
         life: {
-            can: 'assets/Coca-Cola.png',
-            bg: 'assets/green_background.jpg',
+            can: 'assets/Coca-Cola.webp',
+            bg: 'assets/green_background.webp',
             btn: 'Classic Red'
         },
         classic: {
-            can: 'assets/Coca_Cola_Classic_Can.png',
-            bg: 'assets/red_background.png',
+            can: 'assets/Coca_Cola_Classic_Can.webp',
+            bg: 'assets/red_background.webp',
             btn: 'Nature Life'
         }
     };
