@@ -1,0 +1,38 @@
+:root {
+    /* Emerald Monochrome Palette (Default/Life) */
+    --clr-primary-900: #022c22;
+    --clr-primary-800: #064e3b;
+    --clr-primary-700: #047857;
+    --clr-primary-600: #059669;
+    --clr-primary-500: #10b981;
+    --clr-primary-400: #34d399;
+    --clr-accent: var(--clr-primary-400);
+}
+
+[data-theme="classic"] {
+    /* Classic Red Palette */
+    --clr-primary-900: #4a0404;
+    --clr-primary-800: #7a0808;
+    --clr-primary-700: #a10a0a;
+    --clr-primary-600: #c8102e; /* Coca-Cola Red */
+    --clr-primary-500: #e31837;
+    --clr-primary-400: #ff4d4d;
+    --clr-accent: var(--clr-primary-400);
+}
+
+:root {
+    /* Base Colors mapping */
+    --bg-primary: var(--clr-primary-900);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+
+    /* Glassmorphism Tokens */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-blur: 25px;
+    --glass-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Lora', serif;
+}

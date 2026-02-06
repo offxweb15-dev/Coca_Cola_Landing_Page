@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Background & Texture */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/green_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.noise-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-primary);
+    background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+    mix-blend-mode: overlay;
+}
+
+.page-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+}
+
+/* Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.theme-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.theme-btn:hover {
+    background: white;
+    color: black;
+}
+
+.logo {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 2px;
+    background: white;
+}
+
+/* Hero Container */
+.hero-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section {
+    position: relative;
+}
+
+/* Left Section */
+.since-text {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.since-text span {
+    display: block;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1.8rem;
+    opacity: 0.8;
+}
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background: var(--clr-emerald-400);
+    margin: 1.5rem 0;
+}
+
+.body-copy {
+    line-height: 1.6;
+    max-width: 300px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Center Section */
+.product-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass & Spatial Design */
+.glass-card {
+    position: absolute;
+    width: 380px;
+    height: 520px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(25px) saturate(120%);
+    -webkit-backdrop-filter: blur(25px) saturate(120%);
+    border-radius: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.product-can {
+    height: 480px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6));
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.product-can:hover {
+    transform: translateY(-15px) scale(1.02);
+}
+
+/* Typography Refinement */
+.since-text {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-emerald-400);
+}
+
+.since-text span {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: white;
+    text-transform: none;
+    letter-spacing: normal;
+    opacity: 1;
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background: var(--clr-emerald-500);
+    margin: 2rem 0;
+}
+
+.body-copy {
+    line-height: 1.8;
+    max-width: 320px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.headline {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.headline .highlight {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--clr-accent);
+}
+
+/* CTA & Icons */
+.cta-button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 1rem 2rem;
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    border-color: white;
+    padding-right: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-icon svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.4s ease;
+}
+
+.cta-button:hover .arrow-icon svg {
+    transform: translateX(5px);
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+.menu-icon span {
+    width: 28px;
+    height: 1px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.menu-icon:hover span:last-child {
+    width: 18px;
+}
+
+/* Footer Styling */
+.page-footer {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.page-footer:hover {
+    opacity: 1;
+}
+
+.page-footer p {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.page-footer .designer {
+    color: var(--clr-emerald-400);
+    font-weight: 600;
+}
+
+.page-footer .source-link {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.page-footer .source-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--clr-emerald-400);
+    transition: width 0.3s ease;
+}
+
+.page-footer .source-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive Optimization */
+@media (max-width: 1200px) {
+    .page-wrapper { padding: 2rem; }
+    .headline { font-size: 3.2rem; }
+}
+
+@media (max-width: 1024px) {
+    body { overflow-y: auto; height: auto; }
+    .page-wrapper { height: auto; padding: 2rem 1.5rem; }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-section .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .since-text span { font-size: 1.8rem; }
+    
+    .glass-card {
+        width: 300px;
+        height: 420px;
+    }
+
+    .product-can {
+        height: 380px;
+    }
+
+    .headline {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .body-copy {
+        font-size: 1rem;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline { font-size: 2.2rem; }
+    .glass-card { width: 260px; height: 360px; }
+    .product-can { height: 320px; }
+}

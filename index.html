@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola Life | Naturally Refreshing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/colors.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="noise-texture"></div>
+
+    <main class="page-wrapper">
+        <nav class="top-nav">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2560px-Coca-Cola_logo.svg.png" alt="Coca-Cola" class="logo">
+            </div>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="btn-icon"></span>
+                    <span class="btn-text">Classic Red</span>
+                </button>
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-container">
+            <!-- Left Section: Typography -->
+            <section class="section left-section">
+                <div class="content">
+                    <h2 class="since-text">Coke Life <span>Since 2013</span></h2>
+                    <div class="divider"></div>
+                    <p class="body-copy">
+                        A unique blend of sugar and stevia leaf extract. 
+                        The lower-calorie refreshment you love, 
+                        inspired by nature.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Center Section: Product Can -->
+            <section class="section center-section">
+                <div class="product-stage">
+                    <div class="glass-card"></div>
+                    <img id="hero-can" src="assets/Coca-Cola.png" alt="Coca-Cola Life Can" class="product-can">
+                </div>
+            </section>
+
+            <!-- Right Section: Marketing -->
+            <section class="section right-section">
+                <div class="promo-content">
+                    <h1 class="headline">
+                        Same Refreshment<br>
+                        Now With <span class="highlight">STEVIA</span>
+                    </h1>
+                    <button class="cta-button">
+                        <span class="cta-text">Discover More</span>
+                        <div class="arrow-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <footer class="page-footer">
+            <p>Designed by <span class="designer">Web Monster</span> | Inspired by <a href="https://pinterest.com" target="_blank" class="source-link">Pinterest</a></p>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
